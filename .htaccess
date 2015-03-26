@@ -1,0 +1,22 @@
+# php_value display_errors 1
+
+# HTTP Basic Access Authentication
+AuthType Basic
+AuthName "please verify your Access to phpTail"
+AuthUserFile .htpasswd
+require valid-user
+
+# allow access from 10.x.x.x and 192.168.x.x without password
+Order deny,allow
+Deny from all
+Allow from 127.0.0.1
+Allow from 10.
+Allow from 192.168.
+
+Satisfy ANY
+
+# deny access to all config files
+<Files *.json>
+    Order Deny,Allow
+    Deny from all
+</Files>

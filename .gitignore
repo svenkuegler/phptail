@@ -1,0 +1,4 @@
+.idea
+.vagrant
+/nbproject
+config.json
