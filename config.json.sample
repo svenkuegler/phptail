@@ -1,0 +1,11 @@
+{
+    "maxsizetoload": 1024000,
+    "reloadinterval": 3000,
+    "invert": 1,
+    "logfiles": [
+        {"pos": 1, "name":"Access Log (Windows)", "file":"C:/wamp/bin/apache/apache2.4.9/logs/access.log","lines":50},
+        {"pos": 2, "name":"Error Log (Windows)", "file":"C:/wamp/bin/apache/apache2.4.9/logs/error.log","lines":50},
+        {"pos": 3, "name":"Access Log (Linux)", "file":"/var/log/apache2/access.log","lines":50},
+        {"pos": 4, "name":"Error Log (Linux)", "file":"/var/log/apache2/error.log","lines":50},
+    ]
+}
