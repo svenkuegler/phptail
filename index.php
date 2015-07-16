@@ -39,11 +39,11 @@
                 </div>
                 <div class="">
                     <ul class="nav navbar-nav">
-                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#settingsModal">Settings</a>
+                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#settingsModal"><?php echo _('Settings');?></a>
                         </li>
                         <?php if(count($phptail->getLogfiles())>0): ?>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Logfiles <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo _('Logfiles');?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <?php foreach($phptail->getLogfiles() as $file):?>
                                 <li>

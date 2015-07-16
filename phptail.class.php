@@ -15,7 +15,7 @@ class phpTail {
     /**
      * @var string
      */
-    private $version = "v 0.1b";
+    private $version = "v0.1.0-pre";
 
     /**
      * @var array
@@ -47,8 +47,24 @@ class phpTail {
      */
     function __construct() {
         $this->_getSettings();
+        $this->_setLocale();
     }
 
+    /**
+     * Set Locale
+     */
+    private function _setLocale() {
+        if (function_exists("gettext")) {
+            putenv('LC_ALL=de_DE');
+            setlocale(LC_ALL, 'de_DE');
+            bindtextdomain("messages", "./locale");
+            bind_textdomain_codeset("messages", 'UTF-8'); 
+            textdomain("messages");    
+        } else {
+            $this->_setMessage(_("Translation not available on this System!"), phpTail::WARNING);
+        }
+    }
+    
     /**
      * Get Settings
      */
